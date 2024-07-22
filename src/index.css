@@ -1,13 +1,144 @@
+html,
+
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box; 
+  animation: slideUp 3s linear 0.1s forwards;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.des-btn{
+  background-color: #FC1503;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+}
+.dropdown-arrow {
+  height: 0;
+  width: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid white;
+  position: relative;
+  top: 45px;
+  left: 350px;
+}
+.category{
+ margin-right: 10px;
+ font-size: 2.5rem;
+}
+.color{
+  color: #FC1503;
+
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(114, 113, 113);
+  border-radius: 10px;
+  height: 200px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.category-btn:hover {
+  background-color: #FC1503 !important;
+  color: white !important;
+}
+
+.category-btn:hover span{
+  color: white !important;
+}
+
+.react-player {
+  margin-top: 3%;
+  height: 77vh !important;
+  width: 100% !important;
+}
+
+.search-bar{
+  border:none;
+  outline:none;
+  width:350px;
+}
+
+.category-btn{
+  font-weight: bold !important;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  cursor:pointer;
+  background: transparent;
+  outline: none;
+  border: none;
+
+  padding: 7px 15px;
+  margin: 10px 0px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 900px) {
+  .category-btn{
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width:800px){
+  .copyright{
+    display:none !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .scroll-horizontal {
+    overflow: auto !important;
+  }
+
+  .react-player {
+    height: 45vh !important;
+  }
+  .search-bar{
+    width:200px;
+  }
+}
+@keyframes slideInup {
+  0% {
+height: 0;
+  }
+  100% {
+    height: 100%;
+
+  }
+}
+@keyframes slideUp {
+  from {
+      transform: translateY(100%);
+  }
+  to {
+      transform: translateY(0);
+  }
 }
